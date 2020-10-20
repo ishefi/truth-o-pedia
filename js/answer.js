@@ -9,8 +9,6 @@ var url = new URL(document.URL);
 var question = url.searchParams.get("question");
 var raw_answer = url.searchParams.get("ans");
 
-
-document.title = question
 if (raw_answer) {
     answer = decipher(raw_answer);
 }
@@ -26,6 +24,7 @@ if (!question){
 
 var questionElem = document.getElementById("question");
 questionElem.innerText = question;
+document.title = question;
 
 if (question[0].match(/^[a-z0-9]+$/i)){
     var introElem = document.getElementById("intro");
