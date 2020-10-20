@@ -4,7 +4,8 @@ document.getElementById("submit").addEventListener("click", function() {
         var ciphered = cipher(answer);
 
         var url = new URL(document.URL)
-	url.pathname = "/"
+	var pathmatch = url.pathname.match(/(.*)\/form.html/)
+	url.pathname = pathmatch[1]
 	url.searchParams.append("question", question)
 	url.searchParams.append("ans", ciphered) 
 	window.location.href = url.toString();
