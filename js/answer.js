@@ -30,3 +30,7 @@ if (question[0].match(/^[a-z0-9]+$/i)){
     var introElem = document.getElementById("intro");
     introElem.style.direction = "ltr";
 }
+
+var toForm = document.getElementById("toForm");
+url = new URL(document.URL);
+toForm.href = url.pathname + "form";
