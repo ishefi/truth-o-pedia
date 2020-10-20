@@ -11,11 +11,18 @@ var raw_answer = url.searchParams.get("ans");
 
 
 document.title = question
-
-answer = decipher(raw_answer);
-
+if (raw_answer) {
+    answer = decipher(raw_answer);
+}
+else {
+    answer = "42";
+}
 var answerElem = document.getElementById("answer");
 answerElem.innerText = answer;
+
+if (!question){
+    question = "What is the answer to life, the universe and everything?"
+}
 
 var questionElem = document.getElementById("question");
 questionElem.innerText = question;
