@@ -13,8 +13,11 @@ if (raw_answer) {
     answer = decipher(raw_answer);
 }
 else {
-    answer = "42";
+    answer = "";
 }
+
+answer = answer || "42";
+
 var answerElem = document.getElementById("answer");
 answerElem.innerText = answer;
 
