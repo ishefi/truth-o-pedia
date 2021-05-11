@@ -22,7 +22,7 @@ var answerElem = document.getElementById("answer");
 answerElem.innerText = answer;
 
 if (!question){
-    question = "What is the answer to life, the universe and everything?"
+    question = "What is the answer to the Ultimate Question of Life, the Universe, and Everything?"
 }
 
 var questionElem = document.getElementById("question");
